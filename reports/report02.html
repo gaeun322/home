@@ -5,24 +5,35 @@
     <title>취업 정보 계정 만들기</title>
 </head>
 <style>
-    span{color:red;
-        font-size:10pt;}
-    p{font-weight:bold;
-        background-color:lightblue;
-        width:800px;
-        padding-left:10px}
-    div{display:inline-block;
-        margin-left:8px;
-        text-align:right;
-        width:130px;
-        padding-right:8px;}
-    div > span{color:red;}
-    a{margin-left:200px;}
+    #annotate {
+        color: red;
+        font-size: 10pt;
+    }
+    p {
+        font-weight: bold;
+        background-color: lightblue;
+        width: 800px;
+        padding-left: 10px
+    }
+    div {
+        margin-left: 8px;
+        text-align: right;
+        width: 130px;
+        padding-right: 8px;
+        display: inline-block;
+    }
+    div > span {
+        color: red;
+    }
+    b {
+        margin-left :200px;
+    }
 </style>
 <body>
 <h2>취업 정보 계정 만들기</h2>
+<span id="annotate">* 필수 입력 항목</span><br>
+
 <form>
-    <span>* 필수 입력 항목</span><br><br>
     <p>기본 정보</p>
     <div>이 름<span>*</span></div>
         <input type="text" size="8"><br>
@@ -45,10 +56,10 @@
     <div>전 공<span>*</span></div>
         <input type="text" size="12"><br>
     <div>졸업 여부<span>*</span></div>
-        <select name="graduate">
-            <option value="---선택---" selected>---선택---</option>
-            <option value="졸업예정">졸업예정</option>
-            <option value="졸업">졸업</option>
+        <select name="status">
+            <option value="0" selected>---선택---</option>
+            <option value="1">졸업예정</option>
+            <option value="2">졸업</option>
         </select><br>
     <div>졸업(예정)일</div>
         <input type="date">
@@ -67,8 +78,8 @@
     <div>첨부 파일</div>
         <input type="file"><br><br>
 
-    <a><input type="submit" value="제 출">
-        <input type="reset" value="재작성"></a>
+    <b><input type="submit" value="제 출">
+        <input type="reset" value="재작성"></b>
 </form>
 </body>
 </html>
