@@ -26,7 +26,12 @@
 
         for(var j=0; j<x; j++) {
             var new_x = new_row(prev_array);
-            document.write(new_x+"<br>");
+            for(var n=0; n<x; n++) {
+                parseInt(new_x[n])
+                if (isFinite(new_x[n]))
+                    document.write(new_x[n]+" ");
+            }
+            document.write("<br>")
             prev_array = new_x;
         }
     </script>
