@@ -19,10 +19,10 @@
         function pascals() {
             var x = document.getElementById("size").value;
             var prev_row = []
+            var output = '';
 
             for (var j = 0; j < x; j++) {
                 var pascal = [];
-                var output = "";
                 var len = prev_row.length;
                 pascal[0] = 1;
                 pascal[len] = 1;
@@ -30,17 +30,15 @@
                 if (len >= 2)
                     for (var i = 1; i < len; i++)
                         pascal[i] = prev_row[i - 1] + prev_row[i];
-                var new_x = pascal;
 
-                for (var n = 0; n < x; n++) {
-                    parseInt(new_x[n])
-                    if (isFinite(new_x[n]))
-                        output += new_x[n] + " ";
+                prev_row = pascal;
+
+                for(var n=0; n<pascal.length; n++) {
+                    output += pascal[n] + " ";
                 }
-                document.write("<br>")
-                prev_row = new_x;
-                document.getElementById("draw_area").value = output;
+                output += '<br>';
             }
+            document.getElementById("draw_area").innerHTML = output;
         }
     </script>
 </head>
